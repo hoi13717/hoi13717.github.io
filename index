@@ -21,10 +21,10 @@
         <section>
             <h2 class="text-2xl font-semibold text-slate-800 mb-8 border-l-4 border-blue-600 pl-4">Professional Excellence</h2>
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                <h3 class="text-lg font-bold mb-2">Samyang Foods | SCM Planning Team</h3>
+                <h3 class="text-lg font-bold mb-2">삼양식품 | SCM기획팀 재고정책파트</h3>
                 <p class="text-gray-600 leading-relaxed">
-                    삼양식품 재고정책파트에서 SKU 합리화와 재고 최적화를 담당하고 있습니다. 
-                    데이터를 통해 불필요한 낭비를 줄이고, 공급망의 효율적인 흐름(Flow)을 설계하는 것에 자부심을 느낍니다.
+                    데이터를 통해 공급망의 효율을 극대화하는 SCM 전문가입니다. 
+                    SKU 합리화와 재고 최적화 프로세스를 설계하며 기업의 불필요한 낭비를 제거하는 최적의 흐름을 만듭니다.
                 </p>
             </div>
         </section>
@@ -32,11 +32,11 @@
         <section class="grid md:grid-cols-2 gap-8">
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                 <h2 class="text-xl font-bold mb-4"><i class="fa-solid fa-person-running text-blue-600 mr-2"></i>Runner</h2>
-                <p class="text-gray-600">2026년 10월 풀마라톤 완주를 목표로 달립니다. 매일의 러닝을 통해 한계를 극복하는 끈기를 배웁니다.</p>
+                <p class="text-gray-600">2026년 10월 풀마라톤 완주를 목표로 달립니다. 꾸준한 러닝으로 단단한 체력과 인내심을 기르고 있습니다.</p>
             </div>
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                 <h2 class="text-xl font-bold mb-4"><i class="fa-solid fa-guitar text-blue-600 mr-2"></i>Musician</h2>
-                <p class="text-gray-600">밴드에서 피아노와 기타를 연주합니다. 정교한 SCM 업무 뒤에 찾아오는 음악적 여백을 사랑합니다.</p>
+                <p class="text-gray-600">밴드에서 피아노와 기타를 연주하며 조화로운 선율을 만듭니다. 업무의 정교함과 음악의 여유를 함께 추구합니다.</p>
             </div>
         </section>
 
@@ -49,22 +49,22 @@
                 </div>
                 <div class="p-4 bg-slate-800 rounded-xl">
                     <p class="text-sm opacity-70">Life</p>
-                    <p class="font-bold">Feb Wedding</p>
+                    <p class="font-bold">2/7 Wedding</p>
                 </div>
                 <div class="p-4 bg-slate-800 rounded-xl">
                     <p class="text-sm opacity-70">Skill</p>
                     <p class="font-bold">SQLD & AI</p>
                 </div>
                 <div class="p-4 bg-slate-800 rounded-xl">
-                    <p class="text-sm opacity-70">Finance</p>
-                    <p class="font-bold">Stock Portfolio</p>
+                    <p class="text-sm opacity-70">Marathon</p>
+                    <p class="font-bold">Oct Full-Course</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="py-12 text-center text-gray-400 text-sm">
-        <p>&copy; 2026 Howon Jeong. Built with AI Thought Partner.</p>
+        <p>&copy; 2026 Howon Jeong. All rights reserved.</p>
     </footer>
 
 </body>
