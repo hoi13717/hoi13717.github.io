@@ -3,125 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Howon Jeong | SCM & Logistics Specialist</title>
+    <title>Howon Jeong | SCM Optimizer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
 
-    <header class="bg-white border-b border-slate-200">
-        <div class="max-w-5xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
-            <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl ring-4 ring-blue-50">
-                <img src="profile.jpg" alt="정호원" class="w-full h-full object-cover">
-            </div>
-            <div class="flex-1 text-center md:text-left">
-                <h1 class="text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Howon Jeong</h1>
-                <p class="text-2xl text-blue-700 font-semibold mb-6">SCM Optimizer & Logistics Innovation Specialist</p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-3 text-sm font-medium text-slate-500">
-                    <span class="bg-slate-100 px-3 py-1 rounded-full border border-slate-200">#Samyang_Foods</span>
-                    <span class="bg-slate-100 px-3 py-1 rounded-full border border-slate-200">#WMS_PM</span>
-                    <span class="bg-slate-100 px-3 py-1 rounded-full border border-slate-200">#Data_Analyst</span>
-                    <span class="bg-slate-100 px-3 py-1 rounded-full border border-slate-200">#Marathoner</span>
-                </div>
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-slate-900">Howon Jeong</h1>
+            <div class="flex gap-4">
+                <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+                <a href="#" class="text-slate-400 hover:text-pink-500 transition-colors" title="Instagram"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="mailto:hwjeong@roundsquare.ai" class="text-slate-400 hover:text-slate-900 transition-colors" title="Email"><i class="fa-solid fa-envelope text-2xl"></i></a>
             </div>
         </div>
     </header>
 
+    <section class="bg-white">
+        <div class="max-w-5xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl ring-4 ring-blue-50">
+                <img src="profile.jpg" alt="Howon Jeong" class="w-full h-full object-cover">
+            </div>
+            <div class="flex-1 text-center md:text-left">
+                <p class="text-blue-600 font-bold tracking-widest uppercase mb-2">SCM & Logistics Specialist</p>
+                <h2 class="text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">정 호 원</h2>
+                <p class="text-xl text-slate-500 font-light leading-relaxed mb-8">
+                    "데이터를 통해 최적의 흐름을 설계하고, 효율로 가치를 증명합니다."
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-2">
+                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-xs font-bold">SAMYANG FOODS</span>
+                    <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded text-xs font-bold">WMS PM</span>
+                    <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded text-xs font-bold">DATA ANALYST</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <main class="max-w-5xl mx-auto px-6 py-20 space-y-32">
         
+        <section id="journal">
+            <div class="flex justify-between items-end mb-10">
+                <h2 class="text-3xl font-bold text-slate-900 flex items-center gap-3">
+                    <i class="fa-solid fa-pen-to-square text-blue-600"></i> Insights & Journal
+                </h2>
+                <p class="text-slate-400 text-sm">기록을 통한 꾸준한 성장</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <article class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded mb-4 inline-block">SCM INSIGHT</span>
+                    <h3 class="font-bold text-slate-900 mb-2">SKU 합리화 프로세스 구축기</h3>
+                    <p class="text-sm text-slate-500 line-clamp-3 mb-4">삼양식품 재고정책파트에서 진행 중인 SKU 최적화 프로젝트의 핵심 로직과 성과를 정리합니다.</p>
+                    <time class="text-[11px] text-slate-400">2026.01.08</time>
+                </article>
+
+                <article class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <span class="text-[10px] font-bold text-green-600 bg-green-50 px-2 py-1 rounded mb-4 inline-block">RUNNING LOG</span>
+                    <h3 class="font-bold text-slate-900 mb-2">10월 풀마라톤 완주를 향한 훈련</h3>
+                    <p class="text-sm text-slate-500 line-clamp-3 mb-4">가민 기록 분석을 통해 사점을 극복하고 페이스를 유지하는 훈련 일지입니다.</p>
+                    <time class="text-[11px] text-slate-400">2026.01.05</time>
+                </article>
+
+                <article class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <span class="text-[10px] font-bold text-red-600 bg-red-50 px-2 py-1 rounded mb-4 inline-block">STUDY LOG</span>
+                    <h3 class="font-bold text-slate-900 mb-2">JLPT N3 단어 암기 팁</h3>
+                    <p class="text-sm text-slate-500 line-clamp-3 mb-4">바쁜 직장 생활 속에서 하루 1시간을 활용한 효율적인 일본어 학습법 공유.</p>
+                    <time class="text-[11px] text-slate-400">2025.12.30</time>
+                </article>
+            </div>
+        </section>
+
         <section>
             <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
-                <i class="fa-solid fa-briefcase text-blue-600"></i> Professional Experience
+                <i class="fa-solid fa-briefcase text-blue-600"></i> Professional Career
             </h2>
-            <div class="space-y-16">
-                <div class="group">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-slate-900">삼양식품 | SCM기획팀 재고정책파트</h3>
-                        <span class="text-slate-400 font-medium">2023.07 - Present</span>
-                    </div>
-                    <ul class="space-y-2 text-slate-600 ml-5 list-disc">
-                        <li>전사 SKU 합리화 프로세스 설계 및 재고 최적화 전략 수립</li>
-                        <li>데이터 기반 재고 예측 모델링을 통한 비용 절감</li>
-                    </ul>
+            <div class="space-y-12 border-l-2 border-slate-100 pl-8 ml-4">
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-5 h-5 bg-blue-600 rounded-full border-4 border-white"></div>
+                    <h3 class="text-xl font-bold text-slate-900">삼양식품 | SCM기획팀 재고정책파트</h3>
+                    <p class="text-sm text-slate-400 mb-4">2023.07 - Present</p>
+                    <p class="text-slate-600 text-sm">전사 SKU 합리화 및 재고 최적화 전략 수립</p>
                 </div>
-
-                <div class="group">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-slate-900">㈜슈피겐코리아 | 물류기획</h3>
-                        <span class="text-slate-400 font-medium">2019.10 - 2023.06</span>
-                    </div>
-                    <ul class="space-y-3 text-slate-600 ml-5 list-disc">
-                        <li><strong>WMS 신규개발 PM:</strong> 이커머스 풀필먼트 전용 WMS SI 개발 리딩 (기여도 80%)</li>
-                        <li><strong>프로세스 혁신:</strong> RPA(UI Path)를 활용한 I/F 불가 항목 솔루션 구축</li>
-                        <li><strong>생산성 극대화:</strong> 데이터 분석 기반 인력 최적화로 생산성 최대 249% 향상</li>
-                        <li><strong>인프라 설계:</strong> 오토스토어(7,300bin) 및 신규 물류센터 레이아웃 ROI 분석</li>
-                    </ul>
-                </div>
-
-                <div class="group">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-slate-900">㈜엠씨아이글로벌로지스틱스</h3>
-                        <span class="text-slate-400 font-medium">2017.07 - 2019.03</span>
-                    </div>
-                    <ul class="space-y-2 text-slate-600 ml-5 list-disc">
-                        <li>LG Display 글로벌 화물 운송 운영 (2개년 연속 KPI A등급 달성)</li>
-                        <li>국제 운송 원가 관리 및 주간/월간 물류 현황 전략 분석</li>
-                    </ul>
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-5 h-5 bg-slate-300 rounded-full border-4 border-white"></div>
+                    <h3 class="text-xl font-bold text-slate-900">㈜슈피겐코리아 | 물류기획</h3>
+                    <p class="text-sm text-slate-400 mb-4">2019.10 - 2023.06</p>
+                    <p class="text-slate-600 text-sm">WMS 개발 PM 및 현장 생산성 249% 향상</p>
                 </div>
             </div>
         </section>
 
-        <section class="grid md:grid-cols-2 gap-10">
-            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-                <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                    <i class="fa-solid fa-award text-blue-600"></i> Certifications
-                </h3>
-                <div class="flex flex-wrap gap-2 text-sm">
-                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg">ADsP</span>
-                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg">물류관리사</span>
-                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg">유통관리사 2급</span>
-                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg">국제무역사</span>
-                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg">무역영어 1급</span>
-                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg">컴퓨활용능력 1급</span>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-                <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                    <i class="fa-solid fa-globe text-blue-600"></i> Languages
-                </h3>
-                <div class="space-y-2 text-sm text-slate-600 font-medium">
-                    <p>English: TOEIC 895 / OPIC IH</p>
-                    <p>Japanese: JLPT N3 (In Progress)</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-slate-900 text-white p-12 rounded-3xl shadow-2xl relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-3xl font-bold mb-10 text-center text-blue-400">Roadmap to 2026</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700">
-                        <i class="fa-solid fa-ring text-pink-400 text-2xl mb-4"></i>
-                        <p class="text-sm opacity-60 mb-1">February 7</p>
-                        <p class="font-bold text-lg">Wedding Day</p>
-                    </div>
-                    <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700">
-                        <i class="fa-solid fa-person-running text-green-400 text-2xl mb-4"></i>
-                        <p class="text-sm opacity-60 mb-1">October</p>
-                        <p class="font-bold text-lg">Marathon Full Course</p>
-                    </div>
-                    <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700">
-                        <i class="fa-solid fa-guitar text-yellow-400 text-2xl mb-4"></i>
-                        <p class="text-sm opacity-60 mb-1">Hobby</p>
-                        <p class="font-bold text-lg">Band (Piano/Guitar)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer class="bg-white border-t border-slate-100 py-16 text-center">
-        <p class="text-slate-400 text-sm">&copy; 2026 Howon Jeong. SCM & Logistics Professional Portfolio.</p>
+    <footer class="bg-slate-900 text-white py-20">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <p class="font-bold text-lg mb-2">Howon Jeong</p>
+                <p class="text-slate-400 text-sm">SCM Optimizer Portfolio &copy; 2026</p>
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="bg-slate-800 p-3 rounded-full hover:bg-blue-600 transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="bg-slate-800 p-3 rounded-full hover:bg-slate-700 transition-all"><i class="fa-solid fa-house"></i></a>
+            </div>
+        </div>
     </footer>
 
 </body>
