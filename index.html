@@ -3,47 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 서비스 50선 - 나의 AI 저장소</title>
+    <title>Didim의 AI 도구 저장소</title>
     <style>
-        /* 기본 스타일 */
-        body { font-family: 'Pretendard', sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f8f9fa; }
-        .container { max-width: 1000px; margin: 0 auto; text-align: center; }
-        
-        /* 버튼 스타일 */
+        body { font-family: 'Pretendard', -apple-system, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f8f9fa; color: #333; }
+        .container { max-width: 1100px; margin: 0 auto; text-align: center; }
         .board-btn {
-            background-color: #007bff; color: white; border: none; padding: 15px 30px;
-            font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer;
-            transition: background 0.3s; margin-bottom: 30px;
+            background-color: #007bff; color: white; border: none; padding: 15px 35px;
+            font-size: 18px; font-weight: bold; border-radius: 10px; cursor: pointer;
+            transition: all 0.3s; margin: 30px 0; box-shadow: 0 4px 15px rgba(0,123,255,0.3);
         }
-        .board-btn:hover { background-color: #0056b3; }
-
-        /* 표 스타일 (기본적으로 숨김 처리) */
-        #ai-table-container { display: none; margin-top: 20px; background: white; padding: 20px; border-radius: 12px; shadow: 0 4px 6px rgba(0,0,0,0.1); overflow-x: auto; }
-        table { width: 100%; border-collapse: collapse; min-width: 600px; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background-color: #f2f2f2; font-weight: bold; }
-        tr:hover { background-color: #f9f9f9; }
-        .link-btn { color: #007bff; text-decoration: none; font-weight: bold; }
-        .category-tag { background: #e7f3ff; color: #007bff; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; }
+        .board-btn:hover { background-color: #0056b3; transform: translateY(-2px); }
+        #ai-table-container { display: none; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow-x: auto; margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; min-width: 800px; }
+        th, td { border-bottom: 1px solid #eee; padding: 15px; text-align: left; }
+        th { background-color: #fdfdfd; font-weight: 700; color: #555; border-top: 2px solid #333; }
+        tr:hover { background-color: #fcfcfc; }
+        .category-tag { background: #eef2ff; color: #4338ca; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+        .link-btn { display: inline-block; padding: 6px 12px; background: #f1f5f9; color: #334155; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 600; }
+        .link-btn:hover { background: #e2e8f0; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>🚀 Didim의 AI 도구 저장소</h1>
-    <p>아래 버튼을 클릭하면 AI 서비스 50선 리스트를 볼 수 있습니다.</p>
+    <p>아래 버튼을 클릭하면 글로벌 주요 AI 서비스 50선 리스트를 볼 수 있습니다.</p>
     
     <button class="board-btn" onclick="toggleTable()">AI 서비스 50선 게시판 보기</button>
 
     <div id="ai-table-container">
-        <h2>🌐 글로벌 주요 AI 서비스 50선</h2>
-        <table id="ai-table">
+        <h2 style="margin-bottom: 20px;">🌐 글로벌 주요 AI 서비스 50선</h2>
+        <table>
             <thead>
                 <tr>
-                    <th>분류</th>
-                    <th>서비스명</th>
-                    <th>주요 특징</th>
-                    <th>링크</th>
+                    <th style="width: 15%;">분류</th>
+                    <th style="width: 20%;">서비스명</th>
+                    <th style="width: 50%;">주요 특징</th>
+                    <th style="width: 15%;">링크</th>
                 </tr>
             </thead>
             <tbody id="table-body">
@@ -53,46 +49,83 @@
 </div>
 
 <script>
-    // AI 데이터 50개 배열
     const aiData = [
-        { cat: "범용 대화", name: "ChatGPT", desc: "가장 대중적인 AI 에이전트", url: "https://chatgpt.com" },
-        { cat: "범용 대화", name: "Gemini", desc: "구글 생태계 연동 AI", url: "https://gemini.google.com" },
-        { cat: "범용 대화", name: "Claude", desc: "자연스러운 문체와 코딩", url: "https://claude.ai" },
-        { cat: "검색/리서치", name: "Perplexity", desc: "출처를 밝히는 검색 엔진", url: "https://www.perplexity.ai" },
-        { cat: "이미지 생성", name: "Midjourney", desc: "예술적 이미지 생성 독보적", url: "https://www.midjourney.com" },
-        { cat: "코딩/개발", name: "Cursor", desc: "AI 기반 코드 편집기", url: "https://www.cursor.com" },
-        { cat: "비디오 생성", name: "Sora", desc: "OpenAI의 고화질 영상 생성", url: "https://openai.com/sora" },
-        { cat: "음악 생성", name: "Suno", desc: "가사로 노래 완곡 생성", url: "https://suno.com" },
-        { cat: "생산성", name: "Gamma", desc: "AI 기반 PPT 자동 생성", url: "https://gamma.app" },
-        { cat: "국내 특화", name: "HyperCLOVA X", desc: "네이버 한국어 특화 AI", url: "https://clova.ai/hyperclova" }
-        // ... (지면상 10개만 예시로 넣었으며, 실제로는 50개를 채워 넣으시면 됩니다)
+        { c: "범용 대화", n: "ChatGPT", d: "가장 대중적인 AI 에이전트", u: "https://chatgpt.com" },
+        { c: "범용 대화", n: "Gemini", d: "구글 생태계 연동 및 긴 문맥 처리", u: "https://gemini.google.com" },
+        { c: "범용 대화", n: "Claude", d: "자연스러운 문체와 뛰어난 코딩 능력", u: "https://claude.ai" },
+        { c: "범용 대화", n: "Llama", d: "메타의 고성능 오픈소스 모델", u: "https://llama.meta.com" },
+        { c: "범용 대화", n: "Mistral", d: "유럽 최고의 효율적 AI 모델", u: "https://mistral.ai" },
+        { c: "범용 대화", n: "Grok", d: "X(트위터) 실시간 데이터 기반 AI", u: "https://x.ai" },
+        { c: "범용 대화", n: "Pi", d: "감성적 대화형 개인 비서", u: "https://pi.ai" },
+        { c: "범용 대화", n: "DeepSeek", d: "코딩/수학 특화 가성비 모델", u: "https://www.deepseek.com" },
+        { c: "범용 대화", n: "Qwen", d: "알리바바의 다국어 특화 모델", u: "https://qwenlm.ai" },
+        { c: "범용 대화", n: "Gemma", d: "구글의 경량형 오픈 모델", u: "https://ai.google.dev/gemma" },
+        { c: "국내 특화", n: "HyperCLOVA X", d: "네이버의 한국어 특화 AI", u: "https://clova.ai/hyperclova" },
+        { c: "국내 특화", n: "Cue:", d: "네이버 검색/쇼핑 연동형 AI", u: "https://cue.naver.com" },
+        { c: "국내 특화", n: "Solar", d: "업스테이지의 고성능 소형 모델", u: "https://www.upstage.ai" },
+        { c: "국내 특화", n: "EXAONE", d: "LG의 전문가용 초거대 AI", u: "https://www.lgresearch.ai" },
+        { c: "국내 특화", n: "A. (에이닷)", d: "SKT 통화 요약 및 비서 서비스", u: "https://adot.ai" },
+        { c: "검색/리서치", n: "Perplexity", d: "출처가 명확한 실시간 검색 엔진", u: "https://www.perplexity.ai" },
+        { c: "검색/리서치", n: "SearchGPT", d: "OpenAI의 실시간 웹 검색 서비스", u: "https://openai.com/index/searchgpt" },
+        { c: "검색/리서치", n: "You.com", d: "모델 선택이 가능한 검색 플랫폼", u: "https://you.com" },
+        { c: "검색/리서치", n: "Genspark", d: "커스텀 페이지 생성형 검색", u: "https://www.genspark.ai" },
+        { c: "검색/리서치", n: "Consensus", d: "논문 데이터 기반 답변 AI", u: "https://consensus.app" },
+        { c: "이미지 생성", n: "Midjourney", d: "최고 수준의 예술적 이미지 생성", u: "https://www.midjourney.com" },
+        { c: "이미지 생성", n: "DALL-E 3", d: "대화로 생성하는 정교한 이미지 AI", u: "https://openai.com/dall-e-3" },
+        { c: "이미지 생성", n: "Stable Diffusion", d: "설치형 오픈소스 이미지 AI", u: "https://stability.ai" },
+        { c: "이미지 생성", n: "Adobe Firefly", d: "저작권 걱정 없는 디자인용 AI", u: "https://firefly.adobe.com" },
+        { c: "이미지 생성", n: "Flux.1", d: "극사실주의 사진급 이미지 생성", u: "https://blackforestlabs.ai" },
+        { c: "이미지 생성", n: "Leonardo.ai", d: "게임 및 캐릭터 에셋 특화", u: "https://leonardo.ai" },
+        { c: "이미지 생성", n: "Ideogram", d: "이미지 내 텍스트 구현력 최상", u: "https://ideogram.ai" },
+        { c: "이미지 생성", n: "Canva Magic", d: "디자인 툴 내 통합 생성 AI", u: "https://www.canva.com" },
+        { c: "비디오 생성", n: "Sora", d: "OpenAI의 혁신적 영상 생성 AI", u: "https://openai.com/sora" },
+        { c: "비디오 생성", n: "Runway Gen-3", d: "전문가용 고퀄리티 영상 제작", u: "https://runwayml.com" },
+        { c: "비디오 생성", n: "Kling", d: "최대 2분 길이 영상 생성 가능", u: "https://klingai.com" },
+        { c: "비디오 생성", n: "Luma Dream", d: "사진을 역동적 영상으로 변환", u: "https://lumalabs.ai/dream-machine" },
+        { c: "비디오 생성", n: "Pika", d: "애니메이션 스타일 특화 영상", u: "https://pika.art" },
+        { c: "비디오 생성", n: "HeyGen", d: "실감나는 아바타 대화 영상 제작", u: "https://www.heygen.com" },
+        { c: "코딩/개발", n: "GitHub Copilot", d: "실시간 코드 자동 완성 도구", u: "https://github.com/features/copilot" },
+        { c: "코딩/개발", n: "Cursor", d: "AI와 대화하며 개발하는 편집기", u: "https://www.cursor.com" },
+        { c: "코딩/개발", n: "Replit Agent", d: "텍스트만으로 앱 배포까지 수행", u: "https://replit.com" },
+        { c: "코딩/개발", n: "v0.dev", d: "UI 디자인을 코드로 즉시 생성", u: "https://v0.dev" },
+        { c: "코딩/개발", n: "Tabnine", d: "기업용 보안 특화 코딩 비서", u: "https://www.tabnine.com" },
+        { c: "음성/음악", n: "ElevenLabs", d: "감정이 담긴 AI 목소리 합성", u: "https://elevenlabs.io" },
+        { c: "음성/음악", n: "Suno", d: "가사만으로 노래 전곡 생성", u: "https://suno.com" },
+        { c: "음성/음악", n: "Udio", d: "예술적 감성의 고품질 음악 생성", u: "https://www.udio.com" },
+        { c: "음성/음악", n: "Murf", d: "나레이션 및 성우 음성 전문 도구", u: "https://murf.ai" },
+        { c: "생산성", n: "Notion AI", d: "문서 정리 및 요약 자동화", u: "https://www.notion.so" },
+        { c: "생산성", n: "Jasper", d: "마케팅 문구 작성 최적화 도구", u: "https://www.jasper.ai" },
+        { c: "생산성", n: "Gamma", d: "주제 입력 시 PPT 자동 생성", u: "https://gamma.app" },
+        { c: "생산성", n: "Copy.ai", d: "광고 카피 및 업무 이메일 자동화", u: "https://www.copy.ai" },
+        { c: "기타 전문", n: "AlphaFold", d: "딥마인드의 단백질 구조 예측 AI", u: "https://alphafold.com" },
+        { c: "기타 전문", n: "Harvey", d: "로펌용 법률 분석 특화 AI", u: "https://www.harvey.ai" },
+        { c: "기타 전문", n: "WolframAlpha", d: "수학 및 정형 데이터 전문 지식 엔진", u: "https://www.wolframalpha.com" }
     ];
 
-    // 나머지 40개 데이터를 반복문 등으로 쉽게 추가할 수 있습니다.
-    // 예시 데이터 추가 로직 (데이터가 많으므로 일부만 구현)
     function loadTable() {
         const tbody = document.getElementById('table-body');
+        tbody.innerHTML = ""; // 초기화
         aiData.forEach(item => {
             const row = `<tr>
-                <td><span class="category-tag">${item.cat}</span></td>
-                <td><strong>${item.name}</strong></td>
-                <td>${item.desc}</td>
-                <td><a href="${item.url}" target="_blank" class="link-btn">방문하기</a></td>
+                <td><span class="category-tag">${item.c}</span></td>
+                <td><strong>${item.n}</strong></td>
+                <td>${item.d}</td>
+                <td><a href="${item.u}" target="_blank" class="link-btn">방문하기</a></td>
             </tr>`;
             tbody.innerHTML += row;
         });
     }
 
-    // 버튼 클릭 시 표 보이기/숨기기
     function toggleTable() {
         const container = document.getElementById('ai-table-container');
+        const btn = document.querySelector('.board-btn');
         if (container.style.display === 'none' || container.style.display === '') {
             container.style.display = 'block';
-            if(document.getElementById('table-body').innerHTML === "") {
-                loadTable(); // 처음 클릭 시에만 데이터 로드
-            }
+            loadTable();
+            btn.innerText = "게시판 닫기";
         } else {
             container.style.display = 'none';
+            btn.innerText = "AI 서비스 50선 게시판 보기";
         }
     }
 </script>
